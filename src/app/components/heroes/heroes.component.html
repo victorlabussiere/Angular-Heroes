@@ -1,0 +1,12 @@
+<section class="flex">
+  <ul class="heroes">
+    <li *ngFor="let hero of heroes">
+      <button type="button" (click)="onSelect(hero)">
+        <span class="badge">{{ hero.id }}</span>
+        <span class="name">{{ hero.name }}</span>
+      </button>
+    </li>
+  </ul>
+  <!-- details component -->
+  <app-hero-detail [hero]="selectedHero"></app-hero-detail>
+</section>
